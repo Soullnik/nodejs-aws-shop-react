@@ -4,13 +4,12 @@ import {
   aws_cloudfront as cloudfront,
   aws_s3_deployment as deploy,
   Stack,
-  StackProps,
 } from "aws-cdk-lib";
 import { Construct } from 'constructs';
 
-export class TestStack extends Stack {
-  constructor(scope: Construct, id: string, props?: StackProps) {
-    super(scope, id, props);
+export class StaticSite extends Construct {
+  constructor(parent: Stack, name: string) {
+    super(parent, name);
 
     const cloudfrontOAI = new cloudfront.OriginAccessIdentity(
       this,
