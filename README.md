@@ -36,3 +36,9 @@ Runs tests in console, in browser or with coverage.
 ### `lint`, `prettier`
 
 Runs linting and formatting for all files in `src` folder.
+
+### task 2
+
+1. s3 link - http://nodejs-aws-shop-soullnik.s3-website-eu-west-1.amazonaws.com/
+2. cloudFront link - http://dizp9bvcn5hpe.cloudfront.net/
+3. add creating script
