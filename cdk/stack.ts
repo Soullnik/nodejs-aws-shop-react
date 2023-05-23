@@ -5,7 +5,7 @@ import { StaticSite } from './static-site';
 
 
 class StaticSiteStack extends Stack {
-    constructor(parent: App, name: string){
+    constructor(parent: App, name: string) {
         super(parent, name)
 
         new StaticSite(this, name)
@@ -14,6 +14,6 @@ class StaticSiteStack extends Stack {
 
 const app = new App();
 
-new StaticSiteStack(app, 'TestStack');
+new StaticSiteStack(app, 'StaticSiteStack');
 
 app.synth();

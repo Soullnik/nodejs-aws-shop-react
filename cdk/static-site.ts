@@ -13,10 +13,10 @@ export class StaticSite extends Construct {
 
     const cloudfrontOAI = new cloudfront.OriginAccessIdentity(
       this,
-      "TEST_OAI"
+      "StaticSite_OAI"
     );
 
-    const siteBucket = new s3.Bucket(this, "TESTStaticBucket", {
+    const siteBucket = new s3.Bucket(this, "StaticSiteBucket", {
       bucketName: 'soullnik-aws',
       websiteIndexDocument: "index.html",
       websiteErrorDocument: "index.html",
@@ -38,7 +38,7 @@ export class StaticSite extends Construct {
 
     const distribution = new cloudfront.CloudFrontWebDistribution(
       this,
-      "test-distribution",
+      "StaticSite-distribution",
       {
         originConfigs: [
           {
@@ -56,7 +56,7 @@ export class StaticSite extends Construct {
       }
     );
 
-    new deploy.BucketDeployment(this, "SOULL-Bucket-Deployment", {
+    new deploy.BucketDeployment(this, "StaticSite-Bucket-Deployment", {
       sources: [deploy.Source.asset("./dist")],
       destinationBucket: siteBucket,
       distribution,
