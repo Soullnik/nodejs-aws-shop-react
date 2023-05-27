@@ -9,6 +9,8 @@
     "cdk": "cdk",
     "cdk:synth": "cdk synth",
     "cdk:deploy": "cdk deploy",
+    "cdk:build:deploy": "npm run build && npm run cdk:deploy",
+    "cdk:bootstrap": "npm cdk bootstrap",
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest run --coverage",
