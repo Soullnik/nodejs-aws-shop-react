@@ -36,3 +36,10 @@ Runs tests in console, in browser or with coverage.
 ### `lint`, `prettier`
 
 Runs linting and formatting for all files in `src` folder.
+
+### task 2
+
+1. s3 link - http://soullnik-aws.s3-website-eu-west-1.amazonaws.com/
+2. cloudFront link - https://d3ieob9tiqtawy.cloudfront.net/
+3. add creating script npm cdk:synth, cdk:deploy, cdk:bootstrap,cdk:build:deploy
+   if you want to init project in aws, run cdk:bootstrap and after that run cdk:build:deploy
