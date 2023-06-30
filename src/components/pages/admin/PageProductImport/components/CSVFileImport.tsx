@@ -29,7 +29,7 @@ export default function CSVFileImport({ url, title }: CSVFileImportProps) {
       const authorization_token = localStorage.getItem("authorization_token");
       const headers: Record<string, string> = authorization_token
         ? {
-            AuthorizeToken: `Basic ${btoa(authorization_token)}`,
+            AuthorizeToken: `Basic ${authorization_token}`,
           }
         : {};
 
